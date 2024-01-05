@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyNetDumpClass</class>
+ <widget class="QMainWindow" name="MyNetDumpClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1134</width>
+    <height>799</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>NetCap</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,1,15">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="lb_NicList">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>网络接口列表</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cb_NicList">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="lb_FilterTips">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>筛选规则</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="le_FilterInput">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pb_FilterEnter">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>筛选</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_3" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QTableWidget" name="wTable_data">
+          <column>
+           <property name="text">
+            <string>时间</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>源地址</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>目的地址</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>协议</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>长度</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>信息</string>
+           </property>
+          </column>
+         </widget>
+         <widget class="QTreeView" name="wTree_data"/>
+         <widget class="QPlainTextEdit" name="pte_data"/>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1134</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="m_File">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOpenFile"/>
+    <addaction name="actionSaveFile"/>
+    <addaction name="actionCloseFile"/>
+   </widget>
+   <widget class="QMenu" name="m_Edit">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="actionClear"/>
+   </widget>
+   <widget class="QMenu" name="m_View">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <addaction name="actionItemStyle"/>
+   </widget>
+   <widget class="QMenu" name="m_Capture">
+    <property name="title">
+     <string>抓包</string>
+    </property>
+    <addaction name="actionnicList"/>
+    <addaction name="actionstartPcap"/>
+    <addaction name="actionstopPcap"/>
+   </widget>
+   <widget class="QMenu" name="m_Alaysis">
+    <property name="title">
+     <string>分析</string>
+    </property>
+    <addaction name="actionPacketStatics"/>
+    <addaction name="actionPacketFilter"/>
+   </widget>
+   <widget class="QMenu" name="m_Help">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionDocument"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="m_File"/>
+   <addaction name="m_Edit"/>
+   <addaction name="m_View"/>
+   <addaction name="m_Capture"/>
+   <addaction name="m_Alaysis"/>
+   <addaction name="m_Help"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpenFile"/>
+   <addaction name="actionSaveFile"/>
+   <addaction name="actionCloseFile"/>
+   <addaction name="separator"/>
+   <addaction name="actionstartPcap"/>
+   <addaction name="actionstopPcap"/>
+   <addaction name="separator"/>
+   <addaction name="actionnicList"/>
+   <addaction name="actionPacketStatics"/>
+   <addaction name="actionItemStyle"/>
+   <addaction name="actionClear"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpenFile">
+   <property name="icon">
+    <iconset resource="MyNetDump.qrc">
+     <normaloff>:/MyNetDump/images/icons8-add-file-96.png</normaloff>:/MyNetDump/images/icons8-add-file-96.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+  </action>
+  <action name="actionSaveFile">
+   <property name="icon">
+    <iconset resource="MyNetDump.qrc">
+     <normaloff>:/MyNetDump/images/icons8-save-96.png</normaloff>:/MyNetDump/images/icons8-save-96.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存文件</string>
+   </property>
+  </action>
+  <action name="actionCloseFile">
+   <property name="icon">
+    <iconset resource="MyNetDump.qrc">
+     <normaloff>:/MyNetDump/images/icons8-delete-file-96.png</normaloff>:/MyNetDump/images/icons8-delete-file-96.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭文件</string>
+   </property>
+  </action>
+  <action name="actionnicList">
+   <property name="icon">
+    <iconset resource="MyNetDump.qrc">
+     <normaloff>:/MyNetDump/images/icons8-list-96.png</normaloff>:/MyNetDump/images/icons8-list-96.png</iconset>
+   </property>
+   <property name="text">
+    <string>网络接口列表</string>
+   </property>
+  </action>
+  <action name="actionstartPcap">
+   <property name="icon">
+    <iconset resource="MyNetDump.qrc">
+     <normaloff>:/MyNetDump/images/play.png</normaloff>:/MyNetDump/images/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>开始抓包</string>
+   </property>
+  </action>
+  <action name="actionstopPcap">
+   <property name="icon">
+    <iconset resource="MyNetDump.qrc">
+     <normaloff>:/MyNetDump/images/stop.png</normaloff>:/MyNetDump/images/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>停止抓包</string>
+   </property>
+  </action>
+  <action name="actionPacketStatics">
+   <property name="icon">
+    <iconset resource="MyNetDump.qrc">
+     <normaloff>:/MyNetDump/images/statistics.png</normaloff>:/MyNetDump/images/statistics.png</iconset>
+   </property>
+   <property name="text">
+    <string>数据包统计</string>
+   </property>
+  </action>
+  <action name="actionDocument">
+   <property name="text">
+    <string>帮助</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="actionPacketFilter">
+   <property name="text">
+    <string>数据包过滤</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="icon">
+    <iconset resource="MyNetDump.qrc">
+     <normaloff>:/MyNetDump/images/icons8-clear-58.png</normaloff>:/MyNetDump/images/icons8-clear-58.png</iconset>
+   </property>
+   <property name="text">
+    <string>清除所有数据</string>
+   </property>
+  </action>
+  <action name="actionItemStyle">
+   <property name="icon">
+    <iconset resource="MyNetDump.qrc">
+     <normaloff>:/MyNetDump/images/item_style.png</normaloff>:/MyNetDump/images/item_style.png</iconset>
+   </property>
+   <property name="text">
+    <string>显示方式</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MyNetDump.qrc"/>
+ </resources>
+ <connections/>
+</ui>

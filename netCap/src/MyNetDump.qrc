@@ -1,0 +1,24 @@
+<RCC>
+  <qresource prefix="MyNetDump">
+    <file>images/favicon.ico</file>
+    <file>images/icon.png</file>
+    <file>images/icons8-clear-58.png</file>
+    <file>images/icons8-add-file-96.png</file>
+    <file>images/icons8-analyze-96.png</file>
+    <file>images/icons8-delete-file-96.png</file>
+    <file>images/icons8-fill-color-96.png</file>
+    <file>images/icons8-filter-96.png</file>
+    <file>images/icons8-list-96.png</file>
+    <file>images/icons8-list-view-96.png</file>
+    <file>images/icons8-new-file-96.png</file>
+    <file>images/icons8-next-80.png</file>
+    <file>images/icons8-save-96.png</file>
+    <file>images/icons8-table-80.png</file>
+    <file>images/item_style.png</file>
+    <file>images/pause.png</file>
+    <file>images/play.png</file>
+    <file>images/save-as.png</file>
+    <file>images/statistics.png</file>
+    <file>images/stop.png</file>
+  </qresource>
+</RCC>
